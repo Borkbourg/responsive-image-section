@@ -1,8 +1,10 @@
-@-moz-viewport { width: device-width; scale: 1; }
-@-ms-viewport { width: device-width; scale: 1; }
-@-o-viewport { width: device-width; scale: 1; }
-@-webkit-viewport { width: device-width; scale: 1; }
-@viewport { width: device-width; scale: 1; }
+html {
+  @-moz-viewport { width: device-width; scale: 1; }
+  @-ms-viewport { width: device-width; scale: 1; }
+  @-o-viewport { width: device-width; scale: 1; }
+  @-webkit-viewport { width: device-width; scale: 1; }
+  @viewport { width: device-width; scale: 1; }
+}
 
 html {
   margin: 0;
@@ -18,16 +20,17 @@ section {
   background-color: #e2e2e2;
 }
 
-div {
+.content {
   padding: 1rem;
+  text-align: left;
 }
 
-h2 {
+h1 {
   margin-top: 0;
   padding-top: 1rem;
 }
 
-h3 {
+h2 {
   margin-bottom: 0;
   font-size: 1rem;
 }
@@ -44,9 +47,15 @@ a {
   padding: .5em;
   margin-bottom: 1rem;
   border-radius: 4px;
+  text-align: center;
 }
 
-img {
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+.img-flex {
   max-width: 100%;
   padding: 0;
   margin: 0;
@@ -55,7 +64,8 @@ img {
 @media only screen and (min-width: 25em) {
 
   html {
-    line-height: 100%/1.3;
+    font-size: 100%;
+    line-height: 1.3;
   }
 
 }
@@ -63,22 +73,24 @@ img {
 @media only screen and (min-width: 38em) {
 
   html {
-    line-height: 110%/1.4;
-    vertical-align: middle;
-    text-align: center;
+    font-size: 110%;
+    line-height: 1.4;
   }
 
-  div {
+  .content {
     display: inline-block;
-    text-align: left;
-    max-width: 45%
+    width: 45%;
+    vertical-align: middle;
   }
 
-  img {
-    display: inline-block;
-    text-align: right;
-    max-width: 48%;
+  .img-flex {
+    width: 100%;
+  }
+
+  .img {
     vertical-align: middle;
+    display: inline-block;
+    width: 45%;
   }
 
 }
